@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Testing / tooling caches
+.pytest_cache/
+.pytesttmp*/
+.pytemp*/
+.pytemp2/
+.ruff_cache/
+.mypy_cache/
+
+# Vendored wheels (see tools/vendor_ocr.py) and download staging
+.pylibs/
+.wheels/
+
+# Scratch directories used while working around the locked-down sandbox
+.piptmp/
+.piptmp2/
+.pipcache/
+.piptest/
+.streamlit_log.txt
+.streamlit_err.txt
+.pytest_run.txt
+.pytest_err.txt
+.pytestout.txt
+_gui_probe.py
+_debug*.py
+_ocrtest*.py
+_clean.py
+_pipnode.py
+_extract*.py
+_img.py
+_xls.py
+*_page1.png
+
+# Generated output (regenerate with the CLI documented in README)
+output/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

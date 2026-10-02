@@ -1,0 +1,18 @@
+# Core runtime dependencies for the Payment Automation & Verification Tool.
+#
+#   pip install -r requirements.txt
+#
+# RapidOCR runs the PP-OCR models on ONNX Runtime: fully offline, no API key, and
+# it recognises both English and traditional Chinese invoices.
+pymupdf>=1.24          # PDF text-layer extraction and page rasterisation
+openpyxl>=3.1          # Payment Request Summary reader, bank file writer
+# NOTE: rapidocr-onnxruntime declares Requires-Python <3.13, so on Python 3.13
+# pip resolves to 1.2.3. The code works with both the 1.2.x and 1.4.x APIs; on
+# Python 3.10-3.12 you will get the newer 1.4.x line instead.
+rapidocr-onnxruntime>=1.2.3
+pillow>=10.0           # page images for the OCR engine
+numpy>=1.24            # arrays handed to the OCR engine
+streamlit>=1.30        # graphical user interface
+
+# Test tooling (optional)
+pytest>=8.0

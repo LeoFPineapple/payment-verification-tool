@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pavt"
+version = "1.0.0"
+description = "AI-powered payment automation and verification tool (OCR crosscheck of payment amounts)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pymupdf>=1.24",
+    "openpyxl>=3.1",
+    "streamlit>=1.30",
+    "rapidocr-onnxruntime>=1.2.3",
+    "pillow>=10.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+pavt = "pavt.pipeline:main"
+
+[project.gui-scripts]
+pavt-gui = "pavt.launcher:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
